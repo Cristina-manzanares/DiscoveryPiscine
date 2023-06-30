@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: black; */
+            display: flex;
+            justify-content: center;
+            margin-top: 40vh;
+            vertical-align: middle;
+        }
+        
+        .wrapper {
+            display: inline-block;
+        }
+        
+        .balloon {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" onmouseout="DecreaseSize()">
+        <div id="balloon" onclick="IncreaseSize(); ChangeColor();" class="balloon"></div>
+    </div>
+
+    <script>
+        var balloon = document.getElementById("balloon");
+        var hoverEnabled = true;
+        var colorIndex = 0;
+        var colors = ["red", "green", "blue"];
+        
+        function IncreaseSize() {
+            var currentSize = parseInt(balloon.style.width) || 200;
+            var newSize = currentSize + 10;
+            if (newSize <= 300 && newSize >= 200) {
+                balloon.style.width = newSize + "px";
+                balloon.style.height = newSize + "px";
+            } else if (newSize > 300) {
+                balloon.style.width = 200 + "px";
+                balloon.style.height = 200 + "px";
+            }
+        }
+        
+        function ChangeColor() {
+            balloon.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+        
+        function DecreaseSize() {
+            var currentSize = parseInt(balloon.style.width);
+            var newSize = currentSize - 10;
+            if (newSize > 200) {
+                balloon.style.width = newSize + "px";
+                balloon.style.height = newSize + "px";
+            }
+        }
+    </script>
+</body>
+</html>

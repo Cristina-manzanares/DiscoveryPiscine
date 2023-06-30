@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    margin: 50%;
+    align-items: center;
+
+}
+button{
+    padding: 100px;
+    border: none;
+
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.azul{
+    background-color: blue;
+}
+button.rojo{
+    background-color: red;
+}
+
+
+

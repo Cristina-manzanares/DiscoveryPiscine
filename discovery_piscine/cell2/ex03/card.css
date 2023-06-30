@@ -1,0 +1,71 @@
+html{
+    align-items: center;
+    align-content: center;
+    margin:auto;
+    vertical-align: middle;
+}
+
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    width:420px;
+    border: 0px solid lightgray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    font-family: sans-serif;
+    margin: auto; 
+    align-items: center;
+  }
+  
+  p, h1, h3{
+    text-align: center;
+  }
+
+  .gato{
+    width: 100%;
+  }
+
+  .logo{
+    justify-content: space-between;
+    width: 10%;
+    padding-bottom: 20px;
+    margin: auto;
+    align-items: center;
+    
+  }
+
+  .titulo{
+    font-size: 24px;
+    padding: 10px 10px 0 10px;;
+    margin: auto;
+    align-items: center;
+  }
+
+  .cuerpo{
+    padding: 10px;
+  }
+
+  .pie{
+    background: #6699ff;
+    border-radius:0;
+    padding: 10px;
+    width: 400px;
+    text-align:center;
+  }
+
+  .pie a{
+    text-decoration: none;
+    color: white;
+  }
+
+  /* .pie a:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: ""
+  } */
